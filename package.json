@@ -1,26 +1,20 @@
 {
-  "private": true,
+  "name": "node-hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build:server": "yarn workspace client unsafe:build && rm -r apis/server/public && mkdir apis/server/public && cp -r apps/client/dist/ apis/server/public/ && yarn workspace server build:ts",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "start": "node index.js"
   },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnpapa/node-hello.git"
   },
-  "name": "clubits",
-  "packageManager": "yarn",
-  "workspaces": [
-    "apis/*",
-    "apps/*",
-    "packages/*"
-  ],
-  "engines": {
-    "node": "18.18.0"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnpapa/node-hello/issues"
+  },
+  "homepage": "https://github.com/johnpapa/node-hello#readme"
 }
